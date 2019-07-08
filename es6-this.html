@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function log(x, y) {
+        y = y || 'world';
+        console.log(x, y);
+    }
+
+    log('Hello');
+    log('Hello', 'China');
+    // ES6之前，不能直接为函数的参数指定默认值，用上述这种方法的话，缺点在于，如果参数y赋值了，但是布尔值为false，则该赋值不起作用。就像下面这个，y等于空字符，结果被改为默认值。
+    log('Hello', '');
+    // ES6允许为函数的参数设置默认值，即直接写在参数定义的后面
+    function log(x, y = 'World') {
+        console.log(x, y);
+    }
+
+    log('Hello') // Hello World
+    log('Hello', '') // Hello
+</script>
+
+</html>

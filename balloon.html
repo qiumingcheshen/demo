@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            background-color: #ccc;
+        }
+        
+        .balloon {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background-color: #faf9f9;
+            /* 6个值 x位移 y位移 羽化程度 宽度 颜色 位置（内or外） */
+            box-shadow: 0px 0px 40px 15px pink inset;
+            border-radius: 160px 160px 64px 160px;
+            transform: rotate(45deg);
+        }
+        
+        .balloon:after {
+            position: absolute;
+            right: -3px;
+            bottom: -3px;
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="balloon"></div>
+    </div>
+</body>
+
+</html>

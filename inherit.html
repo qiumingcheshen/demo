@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 动物
+    function Animal() {
+        this.eat = function() {
+            console.log('animal eat')
+        }
+    }
+
+    // 狗
+    function Dog() {
+        this.bark = function() {
+            console.log('dog bark')
+        }
+    }
+    Dog.prototype = new Animal();
+
+    // 哈士奇
+    var hashiqi = new Dog();
+    console.log(hashiqi);
+</script>
+
+</html>
